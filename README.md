@@ -19,3 +19,11 @@ The app works as follows:
 - By clicking one of the images, the Vision API is triggered and returns the description of the image
 - Afterwards, the text is spoken in English with a female voice, which can be changed in the code behind
 
+## Authors ##
+
+### Daniel Heinze ###
+- Technical Evangelist @ Microsoft
+- Twitter: [@starlord_daniel](https://twitter.com/starlord_daniel)
+- Facebook: [danielsdevblog](https://www.facebook.com/danielsdevblog)
+- LinkedIn: [LinkedIn](https://de.linkedin.com/in/daniel-heinze)
+- Mail: [Mail](mailto:daniel.heinze@microsoft.com)
