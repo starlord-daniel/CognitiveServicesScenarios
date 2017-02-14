@@ -1,0 +1,60 @@
+﻿<Page
+    x:Class="ImageDescription.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ImageDescription"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <StackPanel >
+                <Image Source="/assets/Microsoft-logo_rgb_c-gray_cropped.png" Margin="10 10 0 0" Width="140"
+                       HorizontalAlignment="Left"/>
+                <TextBlock x:Name="TitleText" Style="{StaticResource HeaderTextBlockStyle}"
+            		Text="Image Analysis" Margin="10 -4 0 10"/>
+            </StackPanel>
+
+        </Grid>
+        <Grid Grid.Row="1" Background="#f2f2f2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image x:Name="Image1" Grid.Row="0" Grid.Column="0" Tapped="Image_Tapped" />
+            <Image x:Name="Image2" Grid.Row="0" Grid.Column="1" Tapped="Image_Tapped" />
+            <Image x:Name="Image3" Grid.Row="1" Grid.Column="0" Tapped="Image_Tapped" />
+            <Image x:Name="Image4" Grid.Row="1" Grid.Column="1" Tapped="Image_Tapped" />
+        </Grid>
+        <StackPanel Grid.Row="2"
+                    Orientation="Vertical" 
+                    VerticalAlignment="Top" 
+                    >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="UrlInput" Grid.Column="0" Width="Auto"
+                         PlaceholderText="Type search query" KeyDown="UrlInput_KeyDown" />
+                <Button x:Name="WebSearchButton" Content="Search" Width="100"
+                        Grid.Column="1" Click="WebSearch_Click" />
+            </Grid>
+
+            <TextBlock x:Name="AnalysisResultLabel"
+                       Text="Image Analysis Result" Margin="10 10 10 10"
+                       Style="{StaticResource SubheaderTextBlockStyle}" />
+            <MediaElement x:Name="AudioPlayer" Visibility="Collapsed" />
+        </StackPanel>
+    </Grid>
+</Page>
